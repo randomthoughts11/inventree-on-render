@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: inventree
+    env: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: ALLOWED_HOSTS
+        value: "*"
+      - key: DEBUG
+        value: "False"
+databases:
+  - name: inventree-db
+    databaseName: inventree
+    user: inventree
